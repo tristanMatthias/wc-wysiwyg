@@ -1,6 +1,6 @@
 {
   "name": "wc-wysiwyg",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A web component WYSIWYG text editor built on document.designMode and document.execCommand",
   "main": "dist/wc-wysiwyg.min.js",
   "repository": "https://github.com/tristanMatthias/wc-wysiwyg.git",
