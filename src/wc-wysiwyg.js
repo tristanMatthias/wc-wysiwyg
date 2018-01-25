@@ -41,15 +41,17 @@ export default class WYSIWYG extends HTMLElement {
 
 
         this._contents.addEventListener('keydown', this._handleKey.bind(this));
+        this._contents.addEventListener('focus', () => this._showButtons(true));
+        this._contents.addEventListener('blur', () => this._showButtons(false));
         // this._contents.addEventListener('keyup', this._update.bind(this));
         // this._contents.addEventListener('click', this._update.bind(this));
     }
 
     get value() {
-        return this._contents.contentDocument.body.innerHTML;
+        return this._contents.innerHTML;
     }
     set value(v) {
-        this._contents.contentDocument.body.innerHTML = v;
+        this._contents.innerHTML = v;
     }
 
 
@@ -106,6 +108,11 @@ export default class WYSIWYG extends HTMLElement {
                 }
                 break;
         }
+    }
+
+
+    _showButtons(show) {
+        this._buttons.classList.toggle('show', Boolean(show));
     }
 
     // _update(e) {

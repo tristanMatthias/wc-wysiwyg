@@ -4,6 +4,12 @@
 
     .buttons {
         display: flex;
+        opacity: 0;
+        transition: all 0.25s;
+
+        &.show {
+            opacity: 1;
+        }
 
         button {
             flex: 1;
@@ -24,8 +30,10 @@
 
     #editor {
         position: absolute;
-        height: 100%;
+        top: 40px;
+        bottom: 0;
         width: 100%;
+        overflow: auto;
         border: none;
         outline: none;
     }
