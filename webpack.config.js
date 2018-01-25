@@ -10,7 +10,7 @@ const MinifyPlugin = require('babel-minify-webpack-plugin');
 module.exports = {
     entry: path.resolve(SRC_PATH, 'bundle.js'),
     output: {
-        filename: 'wc-router.min.js',
+        filename: 'wc-wysiwyg.min.js',
         path: path.resolve(DIST_PATH),
         publicPath: '/'
     },

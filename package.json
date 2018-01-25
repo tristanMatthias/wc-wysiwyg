@@ -2,7 +2,7 @@
   "name": "wc-wysiwyg",
   "version": "0.0.2",
   "description": "A web component WYSIWYG text editor built on document.designMode and document.execCommand",
-  "main": "dist/wc-router.min.js",
+  "main": "dist/wc-wysiwyg.min.js",
   "repository": "https://github.com/tristanMatthias/wc-wysiwyg.git",
   "author": "Tristan Matthias <hello@tristanmatthias.com>",
   "license": "MIT",

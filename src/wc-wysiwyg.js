@@ -17,9 +17,9 @@ export default class WYSIWYG extends HTMLElement {
         this.shadowRoot.innerHTML += `<style>${CSS}</style>`;
 
         // Set the design mode
-        this._contents = this.shadowRoot.querySelector('iframe');
+        this._contents = this.shadowRoot.querySelector('#editor');
         this._contents.designMode = 'on';
-        this.document.body.contentEditable = true;
+        this._contents.contentEditable = true;
 
         // Add the buttons
         this._buttons = this.shadowRoot.querySelector('.buttons');
@@ -34,19 +34,15 @@ export default class WYSIWYG extends HTMLElement {
                 i.setAttribute('viewBox', '0 0 40 40');
                 Array.from(clone.children).forEach(c => i.appendChild(c));
                 b.innerHTML = i.outerHTML;
+                b.onclick = () => this.trigger(cmd);
+                this._buttons.appendChild(b);
             }
-            b.onclick = () => this.trigger(cmd);
-            this._buttons.appendChild(b);
         });
 
 
-        this.document.addEventListener('keydown', this._handleKey.bind(this));
-        this.document.addEventListener('keyup', this._update.bind(this));
-        this.document.addEventListener('click', this._update.bind(this));
-    }
-
-    get document() {
-        return this._contents.contentDocument;
+        this._contents.addEventListener('keydown', this._handleKey.bind(this));
+        // this._contents.addEventListener('keyup', this._update.bind(this));
+        // this._contents.addEventListener('click', this._update.bind(this));
     }
 
     get value() {
@@ -58,7 +54,7 @@ export default class WYSIWYG extends HTMLElement {
 
 
     trigger(cmd) {
-        this.document.execCommand(cmd);
+        document.execCommand(cmd);
     }
 
 
@@ -70,9 +66,17 @@ export default class WYSIWYG extends HTMLElement {
                 e.preventDefault();
                 break;
 
+            // Underline
+            case 'KeyU':
+                if (e.metaKey) {
+                    this.trigger('underline');
+                    e.preventDefault();
+                }
+                break;
+
             // Insert image
             case 'KeyI':
-                if (e.metaKey) {
+                if (e.metaKey && e.shiftKey) {
                     this.trigger('insertImage');
                     e.preventDefault();
                 }
@@ -105,7 +109,7 @@ export default class WYSIWYG extends HTMLElement {
     }
 
     // _update(e) {
-    //     console.log(this.document.getSelection().getRangeAt(0).startContainer.parentElement);
+    //     console.log(this._contents.getSelection().getRangeAt(0).startContainer.parentElement);
     // }
 }
 

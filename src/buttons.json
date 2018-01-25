@@ -5,9 +5,14 @@
         "desc": "Bold"
     },
     {
-        "cmd": "createLink",
-        "icon": "editor-link",
-        "desc": "Create a link"
+        "cmd": "italic",
+        "icon": "editor-italic",
+        "desc": "Italic"
+    },
+    {
+        "cmd": "underline",
+        "icon": "editor-underline",
+        "desc": "Underline"
     },
     {
         "cmd": "fontName",
@@ -33,6 +38,11 @@
         "desc": "Indent text"
     },
     {
+        "cmd": "outdent",
+        "icon": "editor-outdent",
+        "desc": "Outdent text"
+    },
+    {
         "cmd": "insertImage",
         "icon": "image",
         "desc": "Insert image"
@@ -46,11 +56,6 @@
         "cmd": "insertUnorderedList",
         "icon": "editor-bullet-unordered",
         "desc": "Numbered list"
-    },
-    {
-        "cmd": "italic",
-        "icon": "editor-italic",
-        "desc": "Italic"
     },
     {
         "cmd": "justifyCenter",
@@ -73,11 +78,6 @@
         "desc": "Justify right"
     },
     {
-        "cmd": "outdent",
-        "icon": "editor-outdent",
-        "desc": "Outdent text"
-    },
-    {
         "cmd": "removeFormat",
         "desc": "Clear formatting",
         "icon": "editor-clear"
@@ -88,9 +88,9 @@
         "desc": "Strikethrough"
     },
     {
-        "cmd": "underline",
-        "icon": "editor-underline",
-        "desc": "Underline"
+        "cmd": "createLink",
+        "icon": "editor-link",
+        "desc": "Create a link"
     },
     {
         "cmd": "unlink",
