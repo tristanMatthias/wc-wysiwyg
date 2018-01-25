@@ -1,0 +1,100 @@
+[
+    {
+        "cmd": "bold",
+        "icon": "editor-bold",
+        "desc": "Bold"
+    },
+    {
+        "cmd": "createLink",
+        "icon": "editor-link",
+        "desc": "Create a link"
+    },
+    {
+        "cmd": "fontName",
+        "val": "\"Inconsolata\", monospace",
+        "desc": "Choose font",
+        "icon": null
+    },
+    {
+        "cmd": "fontSize",
+        "val": "1-7",
+        "icon": null,
+        "desc": "Font size"
+    },
+    {
+        "cmd": "foreColor",
+        "val": "rgba(0, 0, 0,.5)",
+        "desc": "Font color",
+        "icon": null
+    },
+    {
+        "cmd": "indent",
+        "icon": "editor-indent",
+        "desc": "Indent text"
+    },
+    {
+        "cmd": "insertImage",
+        "icon": "image",
+        "desc": "Insert image"
+    },
+    {
+        "cmd": "insertOrderedList",
+        "icon": "editor-bullet-ordered",
+        "desc": "List"
+    },
+    {
+        "cmd": "insertUnorderedList",
+        "icon": "editor-bullet-unordered",
+        "desc": "Numbered list"
+    },
+    {
+        "cmd": "italic",
+        "icon": "editor-italic",
+        "desc": "Italic"
+    },
+    {
+        "cmd": "justifyCenter",
+        "icon": "editor-justify-center",
+        "desc": "Justify center"
+    },
+    {
+        "cmd": "justifyFull",
+        "icon": "editor-justify",
+        "desc": "Justify"
+    },
+    {
+        "cmd": "justifyLeft",
+        "icon": "editor-justify-left",
+        "desc": "Justify left"
+    },
+    {
+        "cmd": "justifyRight",
+        "icon": "editor-justify-right",
+        "desc": "Justify right"
+    },
+    {
+        "cmd": "outdent",
+        "icon": "editor-outdent",
+        "desc": "Outdent text"
+    },
+    {
+        "cmd": "removeFormat",
+        "desc": "Clear formatting",
+        "icon": "editor-clear"
+    },
+    {
+        "cmd": "strikeThrough",
+        "icon": "editor-strikethrough",
+        "desc": "Strikethrough"
+    },
+    {
+        "cmd": "underline",
+        "icon": "editor-underline",
+        "desc": "Underline"
+    },
+    {
+        "cmd": "unlink",
+        "icon": "editor-unlink",
+        "desc": "Remove link"
+    }
+]

@@ -1,0 +1,44 @@
+:host {
+    display: block;
+    position: relative;
+
+    .buttons {
+        display: flex;
+
+        button {
+            flex: 1;
+            height: 30px;
+            max-width: 40px;
+            border: 0;
+            background-color: transparent;
+            padding: 0;
+            outline: none;
+
+            svg {
+                height: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+
+    iframe {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: none;
+    }
+}
+
+
+:host-context([minimal]) {
+    button {
+        display: none;
+
+        &#control-bold,
+        &#control-italic,
+        &#control-underline {
+            display: inline-block;
+        }
+    }
+}
