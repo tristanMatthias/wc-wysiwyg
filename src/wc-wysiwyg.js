@@ -51,7 +51,15 @@ export default class WYSIWYG extends HTMLElement {
         return this._contents.innerHTML;
     }
     set value(v) {
-        this._contents.innerHTML = v;
+        if (this._contents.innerHTML != v) this._contents.innerHTML = v;
+    }
+
+    get name() {
+        return this.getAttribute('name');
+    }
+
+    set name(v) {
+        this.setAttribute('name', v);
     }
 
 
