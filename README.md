@@ -1,4 +1,4 @@
-# ALPHA: WC-ROUTER
+# ALPHA: WC-WYSIWYG
 
 WYSIWYG Text editor built with a Custom Element
 
